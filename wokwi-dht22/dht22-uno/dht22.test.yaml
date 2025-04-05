@@ -1,0 +1,13 @@
+name: 'DHT22 Sensor Test'
+version: 1
+author: 'Uri Shaked'
+
+steps:
+  - wait-serial: 'DHT22 test!'
+  # Wait for first reading
+  - delay: 2000ms
+  # Check exact temperature and humidity values
+  - wait-serial: 'Humidity: 45.80%  Temperature: 23.50Â°C'
+  # Wait for second reading to confirm consistency
+  - delay: 2000ms
+  - wait-serial: 'Humidity: 45.80%  Temperature: 23.50Â°C'
