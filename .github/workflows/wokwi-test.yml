@@ -9,6 +9,15 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        test:
+          - name: dht22-uno
+            path: wokwi-dht22/dht22-uno
+            scenario: dht22.test.yaml
+          - name: slide-potentiometer-uno
+            path: wokwi-slide-potentiometer/pot-uno
+            scenario: slide-potentiometer.test.yaml
     steps:
       - uses: actions/checkout@v4
 
@@ -18,7 +27,7 @@ jobs:
           pip install platformio
 
       - name: Build with PlatformIO
-        working-directory: wokwi-dht22/dht22-uno
+        working-directory: ${{ matrix.test.path }}
         run: pio run
 
       - name: Run Wokwi CI Server
@@ -28,7 +37,7 @@ jobs:
         uses: wokwi/wokwi-ci-action@v1
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
-          path: wokwi-dht22/dht22-uno
+          path: ${{ matrix.test.path }}
           timeout: 10000
-          scenario: dht22.test.yaml
-          serial_log_file: serial.log
+          scenario: ${{ matrix.test.scenario }}
+          serial_log_file: serial-${{ matrix.test.name }}.log

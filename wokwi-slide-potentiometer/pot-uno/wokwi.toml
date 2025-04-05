@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+name = "Slide Potentiometer Test"
+firmware = '.pio/build/uno/firmware.hex'
+elf = '.pio/build/uno/firmware.elf' 

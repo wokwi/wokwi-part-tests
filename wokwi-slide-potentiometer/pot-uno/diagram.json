@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Wokwi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot1",
+      "top": 100,
+      "left": 100,
+      "attrs": {
+        "value": "512",
+        "travelLength": "30"
+      }
+    }
+  ],
+  "connections": [
+    ["uno:A0", "pot1:SIG", "green", ["v0", "h0"]],
+    ["uno:GND.1", "pot1:GND", "black", ["v0", "h0"]],
+    ["uno:5V", "pot1:VCC", "red", ["v0", "h0"]]
+  ]
+} 
