@@ -1,0 +1,10 @@
+version: 1
+name: 'MicroSD Card Test'
+author: 'Uri Shaked'
+
+steps:
+  - wait-serial: 'SD card initialized successfully'
+  - wait-serial: 'File created successfully'
+  - wait-serial: 'Data written successfully'
+  - wait-serial: 'Data read successfully'
+  - wait-serial: 'Test completed'

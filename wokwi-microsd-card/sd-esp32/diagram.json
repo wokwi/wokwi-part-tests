@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 26.66,
+      "left": -10.02,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-microsd-card",
+      "id": "sd1",
+      "top": -33.33,
+      "left": 15.43,
+      "rotate": 90,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    ["esp:TX0", "$serialMonitor:RX", "", []],
+    ["esp:RX0", "$serialMonitor:TX", "", []],
+    ["sd1:SCK", "esp:D18", "green", ["v18", "h-31"]],
+    ["sd1:GND", "esp:GND.1", "black", ["v21", "h-48"]],
+    ["sd1:DO", "esp:D19", "green", ["v24", "h-42"]],
+    ["sd1:DI", "esp:D23", "green", ["v14", "h6"]],
+    ["sd1:CS", "esp:D5", "green", ["v7", "h21"]],
+    ["sd1:VCC", "esp:3V3", "red", ["v11", "h-89", "h79"]]
+  ]
+}
