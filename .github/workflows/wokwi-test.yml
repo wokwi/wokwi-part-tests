@@ -19,6 +19,9 @@ jobs:
           - name: dht22-esp32
             path: wokwi-dht22/dht22-esp32
             scenario: dht22.test.yaml
+          - name: dht22-pico
+            path: wokwi-dht22/dht22-pico
+            scenario: dht22.test.yaml
           - name: slide-potentiometer-uno
             path: wokwi-slide-potentiometer/pot-uno
             scenario: slide-potentiometer.test.yaml
