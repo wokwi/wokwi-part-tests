@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-st-nucleo-l031k6", "id": "nucleo", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": 0,
+      "left": 300,
+      "attrs": { "temperature": "23.5", "humidity": "45.8" }
+    }
+  ],
+  "connections": [
+    [ "$serialMonitor:TX", "nucleo:VCP_RX", "", [] ],
+    [ "$serialMonitor:RX", "nucleo:VCP_TX", "", [] ],
+    [ "nucleo:D2", "dht:SDA", "red", [ "h-15.65", "v135.61", "h324.6" ] ],
+    [ "nucleo:3V3", "dht:VCC", "green", [ "v1.21", "h260.25" ] ],
+    [ "nucleo:GND.1", "dht:GND", "black", [ "h-25.25", "v154.81", "h363" ] ]
+  ],
+  "dependencies": {}
+}
