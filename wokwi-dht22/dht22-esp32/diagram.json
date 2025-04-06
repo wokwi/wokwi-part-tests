@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "attrs": {
+        "frequency": "240"
+      }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "attrs": {
+        "temperature": "23.5",
+        "humidity": "45.8"
+      }
+    }
+  ],
+  "connections": [
+    ["esp:TX", "$serialMonitor:RX", "", []],
+    ["esp:RX", "$serialMonitor:TX", "", []],
+    ["esp:4", "dht:SDA", "green", ["v0"]],
+    ["esp:3V3", "dht:VDD", "red", ["v1"]],
+    ["esp:GND.1", "dht:GND", "black", ["v2"]]
+  ]
+}
