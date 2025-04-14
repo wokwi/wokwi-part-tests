@@ -6,7 +6,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 12 * * *"
+    - cron: '0 12 * * *'
 
 jobs:
   test:
@@ -15,6 +15,9 @@ jobs:
       fail-fast: false
       matrix:
         test:
+          - name: oled-esp32
+            path: board-ssd1306/oled-esp32
+            scenario: ssd1306.test.yaml
           - name: dht22-uno
             path: wokwi-dht22/dht22-uno
             scenario: dht22.test.yaml

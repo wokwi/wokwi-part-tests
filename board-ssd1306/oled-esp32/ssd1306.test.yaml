@@ -1,0 +1,24 @@
+name: 'ESP32 SSD1306 OLED Test'
+version: 1
+author: 'Test Author'
+
+steps:
+  - wait-serial: 'Display initialized'
+  - delay: 100ms
+
+  - wait-serial: 'Counter: 0'
+  - take-screenshot:
+      part-id: 'oled1'
+      compare-with: 'screenshots/counter-0.png'
+  - delay: 1000ms
+
+  - wait-serial: 'Counter: 1'
+  - take-screenshot:
+      part-id: 'oled1'
+      compare-with: 'screenshots/counter-1.png'
+  - delay: 1000ms
+
+  - wait-serial: 'Counter: 2' 
+  - take-screenshot:
+      part-id: 'oled1'
+      compare-with: 'screenshots/counter-2.png'
