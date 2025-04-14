@@ -33,6 +33,9 @@ jobs:
           - name: slide-potentiometer-uno
             path: wokwi-slide-potentiometer/pot-uno
             scenario: slide-potentiometer.test.yaml
+          - name: slide-potentiometer-esp32
+            path: wokwi-slide-potentiometer/pot-esp32
+            scenario: slide-potentiometer.test.yaml
     steps:
       - uses: actions/checkout@v4
 

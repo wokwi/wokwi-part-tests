@@ -1,0 +1,25 @@
+name: 'ESP32 Slide Potentiometer Test'
+version: 1
+author: 'Test Author'
+
+steps:
+  - delay: 100ms
+  - wait-serial: 'Potentiometer value: 2048'
+  - set-control:
+      part-id: pot1
+      control: position
+      value: 1
+  - delay: 100ms
+  - wait-serial: 'Potentiometer value: 4095'
+  - set-control:
+      part-id: pot1
+      control: position
+      value: 0
+  - delay: 100ms
+  - wait-serial: 'Potentiometer value: 0'
+  - set-control:
+      part-id: pot1
+      control: position
+      value: 0.5
+  - delay: 100ms
+  - wait-serial: 'Potentiometer value: 2048' 

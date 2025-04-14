@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Wokwi",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp32", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot1",
+      "top": 81.8,
+      "left": 152.6,
+      "attrs": { "position": "0.5", "travelLength": "30" }
+    }
+  ],
+  "connections": [
+    [ "esp32:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp32:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp32:GPIO36", "pot1:SIG", "green", [ "v0", "h0" ] ],
+    [ "esp32:GND.1", "pot1:GND", "black", [ "h-23.81", "v76.8", "h378.8" ] ],
+    [ "esp32:3V3", "pot1:VCC", "red", [ "v-57.6", "h148.99" ] ],
+    [ "esp32:35", "pot1:SIG", "green", [ "h-14.21", "v144", "h153.6" ] ]
+  ],
+  "dependencies": {}
+}
