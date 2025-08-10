@@ -6,6 +6,8 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
 
 - board-ssd1306
   - [ESP32](./board-ssd1306/oled-esp32/)
+- wokwi-analog-joystick
+  - [Arduino Uno](./wokwi-analog-joystick/joystick-uno/)
 - wokwi-dht22
   - [Arduino Uno](./wokwi-dht22/dht22-uno/)
   - [ESP32](./wokwi-dht22/dht22-esp32/)

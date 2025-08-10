@@ -19,6 +19,9 @@ jobs:
           - name: oled-esp32
             path: board-ssd1306/oled-esp32
             scenario: ssd1306.test.yaml
+          - name: joystick-uno
+            path: wokwi-analog-joystick/joystick-uno
+            scenario: joystick.test.yaml
           - name: dht22-uno
             path: wokwi-dht22/dht22-uno
             scenario: dht22.test.yaml
