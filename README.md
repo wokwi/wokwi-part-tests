@@ -15,6 +15,8 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
   - [STM32L0](./wokwi-dht22/dht22-stm32/)
 - wokwi-ili9341
   - [Arduino Uno](./wokwi-ili9341/lcd-uno/)
+- wokwi-lcd1602
+  - [Arduino Uno](./wokwi-lcd1602/lcd-uno/)
 - wokwi-micro-sd
   - [ESP32](./wokwi-micro-sd/sd-esp32/)
 - wokwi-slide-potentiometer

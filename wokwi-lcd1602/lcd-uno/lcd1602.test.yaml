@@ -1,0 +1,10 @@
+name: 'Arduino Uno ILI9341 Test'
+version: 1
+author: 'Test Author'
+
+steps:
+  - delay: 100ms
+  - wait-serial: 'Display initialized'
+  - take-screenshot:
+      part-id: 'lcd'
+      compare-with: 'screenshots/lcd1602.png'
