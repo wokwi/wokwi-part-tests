@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-xiao-esp32-c3", "id": "esp", "top": -153.03, "left": 4.18, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -176,
+      "left": 149.6,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    ["lcd1:GND", "esp:GND", "black", ["h-57.6", "v105.6"]],
+    ["lcd1:SDA", "esp:D4", "blue", ["h-19.2", "v77", "h-144", "v-48"]],
+    ["lcd1:SCL", "esp:D5", "gold", ["h-9.6", "v57.9", "h-144", "v-28.8"]],
+    ["lcd1:VCC", "esp:3V3", "red", ["h-38.4", "v57.7"]]
+  ],
+  "dependencies": {}
+}

@@ -40,6 +40,9 @@ jobs:
           - name: lcd1602-uno
             path: wokwi-lcd1602/lcd-uno
             scenario: lcd1602.test.yaml
+          - name: lcd1602-esp32-c3
+            path: wokwi-lcd1602/lcd-i2c-esp32-c3
+            scenario: lcd1602.test.yaml
           - name: microsd-card-esp32
             path: wokwi-microsd-card/sd-esp32
             scenario: sd.test.yaml

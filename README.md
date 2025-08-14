@@ -17,6 +17,7 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
   - [Arduino Uno](./wokwi-ili9341/lcd-uno/)
 - wokwi-lcd1602
   - [Arduino Uno](./wokwi-lcd1602/lcd-uno/)
+  - [ESP32-C3 + I2C](./wokwi-lcd1602/lcd-i2c-esp32-c3/)
 - wokwi-micro-sd
   - [ESP32](./wokwi-micro-sd/sd-esp32/)
 - wokwi-slide-potentiometer
