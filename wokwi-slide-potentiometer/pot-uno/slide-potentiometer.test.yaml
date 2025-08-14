@@ -1,6 +1,6 @@
 name: 'Slide Potentiometer Test'
 version: 1
-author: 'Test Author'
+author: 'Uri Shaked'
 
 steps:
   - delay: 1000ms

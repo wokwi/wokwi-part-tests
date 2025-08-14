@@ -1,6 +1,6 @@
 name: 'ESP32 Slide Potentiometer Test'
 version: 1
-author: 'Test Author'
+author: 'Uri Shaked'
 
 steps:
   - delay: 100ms

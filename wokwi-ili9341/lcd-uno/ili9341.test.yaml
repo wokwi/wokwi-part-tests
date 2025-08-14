@@ -1,6 +1,6 @@
 name: 'Arduino Uno ILI9341 Test'
 version: 1
-author: 'Test Author'
+author: 'Uri Shaked'
 
 steps:
   - delay: 100ms
