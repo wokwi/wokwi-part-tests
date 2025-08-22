@@ -1,0 +1,29 @@
+name: 'Photoresistor Sensor Test (ESP32)'
+version: 1
+author: 'Wokwi'
+
+steps:
+  - wait-serial: 'Photoresistor Sensor Test'
+  # Wait for first reading
+  - delay: 500ms
+  # Check initial light value (should be around 500 lux)
+  - wait-serial: 'Sensor value: 250'
+  # Wait for second reading to confirm consistency
+  - delay: 500ms
+  - wait-serial: 'Sensor value: 250'
+  # Set new lux value (bright light)
+  - set-control:
+      part-id: photoresistor
+      control: lux
+      value: 1000
+  - delay: 500ms
+  # Check new values (analog value should be lower)
+  - wait-serial: 'Sensor value: 169'
+  # Set low light condition
+  - set-control:
+      part-id: photoresistor
+      control: lux
+      value: 100
+  - delay: 500ms
+  # Check low light values (analog value should be higher)
+  - wait-serial: 'Sensor value: 511'

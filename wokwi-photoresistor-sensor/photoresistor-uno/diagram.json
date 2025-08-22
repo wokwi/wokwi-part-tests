@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "photoresistor",
+      "top": 57.3,
+      "left": 263.3,
+      "rotate": 90,
+      "attrs": { "lux": "500" }
+    }
+  ],
+  "connections": [
+    [ "uno:5V", "photoresistor:VCC", "red", [ "v48.5", "h204.8", "v-67.2" ] ],
+    [ "uno:A0", "photoresistor:AO", "green", [ "h-14.21", "v29.3", "h142.21", "v-48" ] ],
+    [ "photoresistor:GND", "uno:GND.2", "black", [ "h0.4", "v57.6", "h-185.7" ] ]
+  ],
+  "dependencies": {}
+}

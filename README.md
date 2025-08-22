@@ -20,6 +20,8 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
   - [ESP32-C3 + I2C](./wokwi-lcd1602/lcd-i2c-esp32-c3/)
 - wokwi-micro-sd
   - [ESP32](./wokwi-micro-sd/sd-esp32/)
+- wokwi-photoresistor-sensor
+  - [Arduino Uno](./wokwi-photoresistor-sensor/photoresistor-uno/)
 - wokwi-slide-potentiometer
   - [Arduino Uno](./wokwi-slide-potentiometer/pot-uno/)
   - [ESP32](./wokwi-slide-potentiometer/pot-esp32/)

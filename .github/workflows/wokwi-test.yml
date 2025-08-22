@@ -46,6 +46,9 @@ jobs:
           - name: microsd-card-esp32
             path: wokwi-microsd-card/sd-esp32
             scenario: sd.test.yaml
+          - name: photoresistor-uno
+            path: wokwi-photoresistor-sensor/photoresistor-uno
+            scenario: photoresistor.test.yaml
           - name: slide-potentiometer-uno
             path: wokwi-slide-potentiometer/pot-uno
             scenario: slide-potentiometer.test.yaml
