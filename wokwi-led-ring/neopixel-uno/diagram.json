@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led-ring",
+      "id": "ring1",
+      "top": -239.49,
+      "left": 25.13,
+      "attrs": { "pixels": "24" }
+    }
+  ],
+  "connections": [
+    ["ring1:VCC", "uno:5V", "red", ["v11.92", "h-120.06", "v237.68", "h164.86"]],
+    ["uno:2", "ring1:DIN", "green", ["v-28.2", "h-92.5"]],
+    ["ring1:GND", "uno:GND.1", "black", ["v21.52", "h-9.73"]]
+  ],
+  "dependencies": {}
+}

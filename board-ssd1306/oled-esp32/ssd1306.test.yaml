@@ -1,6 +1,6 @@
 name: 'ESP32 SSD1306 OLED Test'
 version: 1
-author: 'Test Author'
+author: 'Uri Shaked'
 
 steps:
   - wait-serial: 'Display initialized'

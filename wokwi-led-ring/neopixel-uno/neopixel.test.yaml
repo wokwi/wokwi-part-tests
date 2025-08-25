@@ -1,0 +1,9 @@
+name: 'Arduino LED Ring Test'
+version: 1
+author: 'Uri Shaked'
+
+steps:
+  - wait-serial: 'LEDs ready.'
+  - take-screenshot:
+      part-id: 'ring1'
+      compare-with: 'screenshots/led-ring.png'
