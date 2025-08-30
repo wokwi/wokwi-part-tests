@@ -1,0 +1,9 @@
+version: 1
+name: 'MAX7219 Dot Matrix Test'
+author: 'Uri Shaked'
+
+steps:
+  - wait-serial: 'Display ready.'
+  - take-screenshot:
+      part-id: 'm1'
+      compare-with: 'screenshots/max7219.png'

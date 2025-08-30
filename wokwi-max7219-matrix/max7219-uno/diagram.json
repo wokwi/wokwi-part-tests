@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 106.2, "left": 393, "attrs": {} },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "m1",
+      "top": 0,
+      "left": 44.71,
+      "attrs": { "chain": "8" }
+    }
+  ],
+  "connections": [
+    [ "uno:5V", "m1:V+", "red", [ "v30", "*", "h50" ] ],
+    [ "uno:10", "m1:CS", "green", [ "v-25", "*", "h20" ] ],
+    [ "uno:11", "m1:DIN", "orange", [ "v-15", "*", "h30" ] ],
+    [ "uno:13", "m1:CLK", "blue", [ "v-35", "*", "h10" ] ],
+    [ "uno:GND.2", "m1:GND", "black", [ "v20", "*", "h40" ] ]
+  ]
+}
