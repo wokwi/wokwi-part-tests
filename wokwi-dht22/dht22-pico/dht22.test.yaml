@@ -5,9 +5,9 @@ author: 'Uri Shaked'
 steps:
   - wait-serial: 'DHT22 test (Pi Pico)'
   # Wait for first reading and check exact temperature and humidity values
-  - wait-serial: 'Humidity: 45.80%  Temperature: 23.50Â°C'
+  - wait-serial: 'Humidity: 45.80%  Temperature: 23.50°C'
   # Wait for second reading to confirm consistency
-  - wait-serial: 'Humidity: 45.80%  Temperature: 23.50Â°C'
+  - wait-serial: 'Humidity: 45.80%  Temperature: 23.50°C'
   # Set new values
   - set-control:
       part-id: dht
@@ -18,4 +18,4 @@ steps:
       control: humidity
       value: 66.9
   # Check new values
-  - wait-serial: 'Humidity: 66.90%  Temperature: 21.50Â°C' 
+  - wait-serial: 'Humidity: 66.90%  Temperature: 21.50°C' 
