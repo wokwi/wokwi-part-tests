@@ -8,19 +8,16 @@ steps:
       part-id: joystick1
       control: x
       value: -1
-  - delay: 100ms
   - wait-serial: 'Horizontal: 0'
   - set-control:
       part-id: joystick1
       control: y
       value: 1
-  - delay: 100ms
   - wait-serial: 'Vertical: 1023'
   - set-control:
       part-id: joystick1
       control: x
       value: 0.5
-  - delay: 100ms
   - wait-serial: 'Horizontal: 768'
   - set-control:
       part-id: joystick1

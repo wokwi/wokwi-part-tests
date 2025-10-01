@@ -9,17 +9,14 @@ steps:
       part-id: pot1
       control: position
       value: 1
-  - delay: 100ms
   - wait-serial: 'Potentiometer value: 1023'
   - set-control:
       part-id: pot1
       control: position
       value: 0
-  - delay: 100ms
   - wait-serial: 'Potentiometer value: 0'
   - set-control:
       part-id: pot1
       control: position
       value: 0.5
-  - delay: 100ms
   - wait-serial: 'Potentiometer value: 512'

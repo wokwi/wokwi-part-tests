@@ -3,16 +3,12 @@ version: 1
 author: 'Uri Shaked'
 
 steps:
-  - delay: 100ms
   - wait-serial: 'ILI9341 Test!'
-  - delay: 100ms
   - wait-serial: 'Display initialized'
-  - delay: 100ms
   - wait-serial: 'Counter: 0'
   - take-screenshot:
       part-id: 'lcd1'
       compare-with: 'screenshots/count-0.png'
-  - delay: 1000ms
   - wait-serial: 'Counter: 1'
   - take-screenshot:
       part-id: 'lcd1'

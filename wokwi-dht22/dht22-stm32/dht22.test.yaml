@@ -5,12 +5,9 @@ author: 'Uri Shaked'
 steps:
   # Wait for initialization
   - wait-serial: 'DHT22 test (STM32)'
-  # Wait for first reading
-  - delay: 500ms
-  # Check exact temperature and humidity values
+  # Wait for first reading and check exact temperature and humidity values
   - wait-serial: 'Humidity: 45.80%  Temperature: 23.50Â°C'
   # Wait for second reading to confirm consistency
-  - delay: 500ms
   - wait-serial: 'Humidity: 45.80%  Temperature: 23.50Â°C'
   # Set new values
   - set-control:
@@ -21,6 +18,5 @@ steps:
       part-id: dht
       control: humidity
       value: 66.9
-  - delay: 500ms
   # Check new values
   - wait-serial: 'Humidity: 66.90%  Temperature: 21.50Â°C'
