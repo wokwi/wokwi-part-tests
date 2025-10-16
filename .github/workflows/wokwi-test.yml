@@ -34,6 +34,9 @@ jobs:
           - name: dht22-stm32
             path: wokwi-dht22/dht22-stm32
             scenario: dht22.test.yaml
+          - name: hx711-uno
+            path: wokwi-hx711/hx711-uno
+            scenario: hx711.test.yaml
           - name: ili9341-uno
             path: wokwi-ili9341/lcd-uno
             scenario: ili9341.test.yaml

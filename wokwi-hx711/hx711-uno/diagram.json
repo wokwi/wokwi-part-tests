@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "author": "Claude Code",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 163.8, "left": 18.6, "attrs": {} },
+    { "type": "wokwi-hx711", "id": "hx711", "top": 0, "left": 100, "attrs": { "type": "5kg" } }
+  ],
+  "connections": [
+    [ "uno:GND.1", "hx711:GND", "black", [ "v-20", "*", "v0" ] ],
+    [ "uno:3", "hx711:DT", "blue", [ "v-28.8", "h-168.8", "v-107.7" ] ],
+    [ "uno:2", "hx711:SCK", "green", [ "v-19.2", "h-187.9", "v-107.4" ] ],
+    [ "uno:5V", "hx711:VCC", "red", [ "v20", "h-178.6", "v-320.3" ] ]
+  ],
+  "dependencies": {}
+}

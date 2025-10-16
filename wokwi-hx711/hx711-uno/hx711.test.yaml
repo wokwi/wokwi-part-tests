@@ -1,0 +1,25 @@
+name: 'HX711 Load Cell Test'
+version: 1
+author: 'Claude Code'
+
+steps:
+  - wait-serial: 'HX711 test!'
+  - wait-serial: 'HX711 initialized and tared'
+  # Wait for first reading - should be near zero after taring
+  - wait-serial: 'Raw: 0 Weight: 0.00 units'
+  # Wait for second reading to confirm consistency
+  - wait-serial: 'Raw: 0 Weight: 0.00 units'
+  # Set load cell to a specific value (simulate weight applied)
+  - set-control:
+      part-id: hx711
+      control: load
+      value: 1050
+  # Check reading with weight applied (441000 raw / 420 scale = 1050 units)
+  - wait-serial: 'Raw: 441000 Weight: 1050.00 units'
+  # Change weight to different value
+  - set-control:
+      part-id: hx711
+      control: load
+      value: 1680
+  # Check new reading (705600 raw / 420 scale = 1680 units)
+  - wait-serial: 'Raw: 705600 Weight: 1680.00 units'
