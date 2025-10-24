@@ -1,0 +1,36 @@
+name: 'TM1637 7-Segment Display Test'
+version: 1
+author: 'Uri Shaked'
+
+steps:
+  - wait-serial: 'TM1637 test!'
+
+  - wait-serial: 'Displaying: 0000'
+  - take-screenshot:
+      part-id: 'tm1637'
+      compare-with: 'screenshots/screenshot-0000.png'
+
+  - wait-serial: 'Displaying: 1234'
+  - take-screenshot:
+      part-id: 'tm1637'
+      compare-with: 'screenshots/screenshot-1234.png'
+
+  - wait-serial: 'Displaying: 4567'
+  - take-screenshot:
+      part-id: 'tm1637'
+      compare-with: 'screenshots/screenshot-4567.png'
+
+  - wait-serial: 'Displaying: 8888'
+  - take-screenshot:
+      part-id: 'tm1637'
+      compare-with: 'screenshots/screenshot-8888.png'
+
+  - wait-serial: 'Displaying: 13:37'
+  - take-screenshot:
+      part-id: 'tm1637'
+      compare-with: 'screenshots/screenshot-13-37.png'
+
+  - wait-serial: 'Displaying: -42'
+  - take-screenshot:
+      part-id: 'tm1637'
+      compare-with: 'screenshots/screenshot-minus-42.png'

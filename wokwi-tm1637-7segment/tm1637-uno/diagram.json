@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Claude Code",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 144.6, "left": 57, "attrs": {} },
+    {
+      "type": "wokwi-tm1637-7segment",
+      "id": "tm1637",
+      "top": 28.76,
+      "left": -69.77,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "uno:4", "tm1637:CLK", "green", [ "v-96", "h-168.9" ] ],
+    [ "uno:5V", "tm1637:VCC", "red", [ "v20", "h128.6", "v-279.3" ] ],
+    [ "uno:5", "tm1637:DIO", "blue", [ "v0" ] ],
+    [ "uno:GND.1", "tm1637:GND", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

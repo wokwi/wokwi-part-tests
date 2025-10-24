@@ -31,6 +31,8 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
 - wokwi-slide-potentiometer
   - [Arduino Uno](./wokwi-slide-potentiometer/pot-uno/)
   - [ESP32](./wokwi-slide-potentiometer/pot-esp32/)
+- wokwi-tm1637-7segment
+  - [Arduino Uno](./wokwi-tm1637-7segment/tm1637-uno/)
 
 ## Running the tests
 
