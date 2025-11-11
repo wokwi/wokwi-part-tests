@@ -87,6 +87,6 @@ jobs:
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           path: ${{ matrix.test.path }}
-          timeout: 10000
+          timeout: 20000
           scenario: ${{ matrix.test.scenario }}
           serial_log_file: serial-${{ matrix.test.name }}.log

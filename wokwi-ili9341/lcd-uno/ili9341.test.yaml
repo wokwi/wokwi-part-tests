@@ -13,3 +13,4 @@ steps:
   - take-screenshot:
       part-id: 'lcd1'
       compare-with: 'screenshots/count-1.png'
+  - delay: 100ms
