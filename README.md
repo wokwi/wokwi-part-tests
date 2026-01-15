@@ -20,6 +20,7 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
 - wokwi-lcd1602
   - [Arduino Uno](./wokwi-lcd1602/lcd-uno/)
   - [ESP32-C3 + I2C](./wokwi-lcd1602/lcd-i2c-esp32-c3/)
+  - [STM32L0 + I2C](./wokwi-lcd1602/lcd-i2c-stm32/)
 - wokwi-led-ring
   - [Arduino Uno](./wokwi-led-ring/neopixel-uno/)
 - wokwi-max7219-matrix

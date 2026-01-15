@@ -46,6 +46,9 @@ jobs:
           - name: lcd1602-esp32-c3
             path: wokwi-lcd1602/lcd-i2c-esp32-c3
             scenario: lcd1602.test.yaml
+          - name: lcd1602-stm32-i2c
+            path: wokwi-lcd1602/lcd-i2c-stm32
+            scenario: lcd1602.test.yaml
           - name: led-ring-uno
             path: wokwi-led-ring/neopixel-uno
             scenario: neopixel.test.yaml

@@ -1,0 +1,9 @@
+name: 'STM32L0 LCD1602 I2C Test'
+version: 1
+author: 'Uri Shaked'
+
+steps:
+  - wait-serial: 'Display initialized'
+  - take-screenshot:
+      part-id: 'lcd1'
+      compare-with: 'screenshots/lcd1602.png'
