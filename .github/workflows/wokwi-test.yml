@@ -34,6 +34,12 @@ jobs:
           - name: dht22-stm32
             path: wokwi-dht22/dht22-stm32
             scenario: dht22.test.yaml
+          - name: ds18b20-uno
+            path: wokwi-ds18b20/ds18b20-uno
+            scenario: ds18b20.test.yaml
+          - name: ds18b20-esp32
+            path: wokwi-ds18b20/ds18b20-esp32
+            scenario: ds18b20.test.yaml
           - name: hx711-uno
             path: wokwi-hx711/hx711-uno
             scenario: hx711.test.yaml

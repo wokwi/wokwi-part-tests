@@ -1,0 +1,19 @@
+name: 'DS18B20 Temperature Sensor Test'
+version: 1
+author: 'Uri Shaked'
+
+steps:
+  - wait-serial: 'DS18B20 test!'
+  # Wait for device detection
+  - wait-serial: 'Found 1 device(s)'
+  # Wait for first reading and check temperature value
+  - wait-serial: 'Temperature: 23.50 C'
+  # Wait for second reading to confirm consistency
+  - wait-serial: 'Temperature: 23.50 C'
+  # Set new temperature value
+  - set-control:
+      part-id: ds18b20
+      control: temperature
+      value: 18.25
+  # Check new value
+  - wait-serial: 'Temperature: 18.25 C'

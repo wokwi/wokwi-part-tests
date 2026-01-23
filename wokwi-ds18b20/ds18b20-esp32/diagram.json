@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Wokwi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "attrs": {
+        "frequency": "240"
+      }
+    },
+    {
+      "type": "wokwi-ds18b20",
+      "id": "ds18b20",
+      "attrs": {
+        "temperature": "23.5"
+      }
+    }
+  ],
+  "connections": [
+    ["esp:TX", "$serialMonitor:RX", "", []],
+    ["esp:RX", "$serialMonitor:TX", "", []],
+    ["esp:4", "ds18b20:DQ", "green", ["v0"]],
+    ["esp:3V3", "ds18b20:VCC", "red", ["v1"]],
+    ["esp:GND.1", "ds18b20:GND", "black", ["v2"]]
+  ]
+}

@@ -13,6 +13,9 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
   - [ESP32](./wokwi-dht22/dht22-esp32/)
   - [Raspberry Pi Pico](./wokwi-dht22/dht22-pico/)
   - [STM32L0](./wokwi-dht22/dht22-stm32/)
+- wokwi-ds18b20
+  - [Arduino Uno](./wokwi-ds18b20/ds18b20-uno/)
+  - [ESP32](./wokwi-ds18b20/ds18b20-esp32/)
 - wokwi-hx711
   - [Arduino Uno](./wokwi-hx711/hx711-uno/)
 - wokwi-ili9341
