@@ -1,0 +1,19 @@
+name: 'MPU6050 Accelerometer Test'
+version: 1
+author: 'Uri Shaked'
+
+steps:
+  - wait-serial: 'MPU6050 test!'
+  - wait-serial: 'MPU6050 found!'
+  # Default position: Z=1g (sensor flat)
+  - wait-serial: 'Accel X: 0.0 Y: 0.0 Z: 9.8'
+  # Tilt sensor (X=0.5g, Z=0.87g)
+  - set-control:
+      part-id: mpu6050
+      control: accelX
+      value: 0.5
+  - set-control:
+      part-id: mpu6050
+      control: accelZ
+      value: 0.87
+  - wait-serial: 'Accel X: 4.9 Y: 0.0 Z: 8.5'

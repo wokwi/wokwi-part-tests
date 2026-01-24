@@ -30,6 +30,8 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
   - [Arduino Uno](./wokwi-max7219-matrix/max7219-uno/)
 - wokwi-micro-sd
   - [ESP32](./wokwi-micro-sd/sd-esp32/)
+- wokwi-mpu6050
+  - [Arduino Uno](./wokwi-mpu6050/mpu6050-uno/)
 - wokwi-photoresistor-sensor
   - [Arduino Uno](./wokwi-photoresistor-sensor/photoresistor-uno/)
 - wokwi-slide-potentiometer

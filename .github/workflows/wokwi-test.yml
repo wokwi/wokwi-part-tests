@@ -64,6 +64,9 @@ jobs:
           - name: microsd-card-esp32
             path: wokwi-microsd-card/sd-esp32
             scenario: sd.test.yaml
+          - name: mpu6050-uno
+            path: wokwi-mpu6050/mpu6050-uno
+            scenario: mpu6050.test.yaml
           - name: photoresistor-uno
             path: wokwi-photoresistor-sensor/photoresistor-uno
             scenario: photoresistor.test.yaml

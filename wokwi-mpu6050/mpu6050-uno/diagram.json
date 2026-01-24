@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Wokwi",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 160, "left": 20, "attrs": {} },
+    {
+      "type": "wokwi-mpu6050",
+      "id": "mpu6050",
+      "top": 416.62,
+      "left": 184.72,
+      "attrs": { "accelX": "0", "accelY": "0", "accelZ": "1" }
+    }
+  ],
+  "connections": [
+    [ "uno:A4", "mpu6050:SDA", "green", [ "v13.3", "h-35.68" ] ],
+    [ "uno:A5", "mpu6050:SCL", "orange", [ "v32.5", "h-35.58" ] ],
+    [ "uno:GND.2", "mpu6050:GND", "black", [ "v32.5", "h60.02" ] ],
+    [ "uno:5V", "mpu6050:VCC", "red", [ "v42.1", "h79.2" ] ]
+  ],
+  "dependencies": {}
+}
