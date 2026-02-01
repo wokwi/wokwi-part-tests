@@ -1,0 +1,25 @@
+name: 'BMP180 Sensor Test (ESP32-C3)'
+version: 1
+author: 'Wokwi'
+
+steps:
+  # Wait for initialization
+  - wait-serial: 'BMP180 test!'
+  - wait-serial: 'BMP180 found!'
+  # Wait for first reading and check default values
+  - wait-serial: 'Temperature: 24.0 C'
+  - wait-serial: 'Pressure: 1013'  # ~101327 Pa (small rounding in inverse compensation)
+  # Set new temperature
+  - set-control:
+      part-id: bmp180
+      control: temperature
+      value: 30.5
+  # Check new temperature
+  - wait-serial: 'Temperature: 30.5 C'
+  # Set new pressure
+  - set-control:
+      part-id: bmp180
+      control: pressure
+      value: 99000
+  # Check new pressure
+  - wait-serial: 'Pressure: 99000 Pa'

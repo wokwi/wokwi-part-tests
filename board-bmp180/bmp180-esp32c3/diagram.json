@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Wokwi",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-xiao-esp32-c3", "id": "esp", "top": 0.57, "left": 4.18, "attrs": {} },
+    {
+      "type": "board-bmp180",
+      "id": "bmp180",
+      "top": 35.38,
+      "left": 125.06,
+      "attrs": { "temperature": "24", "pressure": "101325" }
+    }
+  ],
+  "connections": [
+    [ "esp:GND", "bmp180:GND", "black", [ "h29.42", "v-37.83", "h146.94", "v21.65" ] ],
+    [ "esp:3V3", "bmp180:VCC", "red", [ "h39.02", "v-28.8", "h86.4" ] ],
+    [ "esp:D4", "bmp180:SDA", "blue", [ "h-15.02", "v38.97", "h216.62", "v-29.37" ] ],
+    [ "esp:D5", "bmp180:SCL", "green", [ "h-24.62", "v38.97", "h235.82", "v-48.57" ] ]
+  ],
+  "dependencies": {}
+}
