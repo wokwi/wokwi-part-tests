@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 9.6,
+      "left": -43.16,
+      "attrs": { "frequency": "240" }
+    },
+    {
+      "type": "board-ili9341-cap-touch",
+      "id": "touch-screen1",
+      "top": -28.04,
+      "left": 182.02,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "touch-screen1:VCC", "red", [ "h-19.05", "v259.2", "h278.4" ] ],
+    [ "esp:GND.1", "touch-screen1:GND", "black", [ "h-9.45", "v144", "h278.4" ] ],
+    [ "esp:23", "touch-screen1:MOSI", "green", [ "h86.4", "v220.8", "h124.8" ] ],
+    [ "esp:18", "touch-screen1:SCK", "yellow", [ "h76.8", "v163.2", "h144" ] ],
+    [ "esp:5", "touch-screen1:CS", "orange", [ "h67.2", "v163.2", "h115.2" ] ],
+    [ "esp:2", "touch-screen1:D/C", "blue", [ "h48", "v153.6", "h153.6" ] ],
+    [ "esp:4", "touch-screen1:RST", "purple", [ "h57.6", "v163.2", "h134.4" ] ],
+    [ "esp:21", "touch-screen1:SDA", "white", [ "h28.8", "v259.2", "h230.4" ] ],
+    [ "esp:22", "touch-screen1:SCL", "gray", [ "h38.4", "v278.4", "h211.2" ] ]
+  ],
+  "dependencies": {}
+}

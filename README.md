@@ -6,6 +6,8 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
 
 - board-bmp180
   - [ESP32-C3](./board-bmp180/bmp180-esp32c3/)
+- board-ili9341-cap-touch
+  - [ESP32](./board-ili9341-cap-touch/touch-esp32/)
 - board-ssd1306
   - [ESP32](./board-ssd1306/oled-esp32/)
 - wokwi-analog-joystick

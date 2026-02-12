@@ -1,0 +1,12 @@
+name: 'ILI9341 capacitive touch test'
+version: 1
+author: 'Uri Shaked'
+
+steps:
+  - wait-serial: 'Touch ready'
+  - touch:
+      part-id: touch-screen1
+      x: 50
+      y: 80
+      duration: 100ms
+  - wait-serial: 'Touch: 50 80'

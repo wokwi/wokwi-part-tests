@@ -19,6 +19,9 @@ jobs:
           - name: bmp180-esp32c3
             path: board-bmp180/bmp180-esp32c3
             scenario: bmp180.test.yaml
+          - name: touch-esp32
+            path: board-ili9341-cap-touch/touch-esp32
+            scenario: touch.test.yaml
           - name: oled-esp32
             path: board-ssd1306/oled-esp32
             scenario: ssd1306.test.yaml
