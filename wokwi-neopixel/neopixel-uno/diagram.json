@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-neopixel", "id": "pixel1", "top": -99.5, "left": 85.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "pixel1:VDD", "uno:5V", "red", [ "h-96", "v316.8", "h169.6" ] ],
+    [ "uno:2", "pixel1:DIN", "green", [ "v-105", "h-92.5" ] ],
+    [ "pixel1:VSS", "uno:GND.1", "black", [ "h8.8", "v18.3", "h-18.9" ] ]
+  ],
+  "dependencies": {}
+}

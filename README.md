@@ -28,14 +28,20 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
   - [Arduino Uno](./wokwi-lcd1602/lcd-uno/)
   - [ESP32-C3 + I2C](./wokwi-lcd1602/lcd-i2c-esp32-c3/)
   - [STM32L0 + I2C](./wokwi-lcd1602/lcd-i2c-stm32/)
+- wokwi-led-matrix
+  - [Arduino Uno](./wokwi-led-matrix/matrix-uno/)
 - wokwi-led-ring
   - [Arduino Uno](./wokwi-led-ring/neopixel-uno/)
+- wokwi-led-strip
+  - [Arduino Uno](./wokwi-led-strip/strip-uno/)
 - wokwi-max7219-matrix
   - [Arduino Uno](./wokwi-max7219-matrix/max7219-uno/)
-- wokwi-micro-sd
-  - [ESP32](./wokwi-micro-sd/sd-esp32/)
+- wokwi-microsd-card
+  - [ESP32](./wokwi-microsd-card/sd-esp32/)
 - wokwi-mpu6050
   - [Arduino Uno](./wokwi-mpu6050/mpu6050-uno/)
+- wokwi-neopixel
+  - [Arduino Uno](./wokwi-neopixel/neopixel-uno/)
 - wokwi-photoresistor-sensor
   - [Arduino Uno](./wokwi-photoresistor-sensor/photoresistor-uno/)
 - wokwi-slide-potentiometer

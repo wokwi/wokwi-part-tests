@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0.6, "left": -0.6, "attrs": {} },
+    {
+      "type": "wokwi-led-matrix",
+      "id": "matrix1",
+      "top": -246,
+      "left": 43.8,
+      "attrs": { "rows": "8", "cols": "8" }
+    }
+  ],
+  "connections": [
+    [ "matrix1:VDD", "uno:5V", "red", [ "v28.8", "h143.6", "v230.4", "h-128.6" ] ],
+    [ "uno:2", "matrix1:DIN", "green", [ "v-38.4", "h-159.1" ] ],
+    [ "matrix1:VSS", "uno:GND.1", "black", [ "v38.4", "h-39.5" ] ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip1",
+      "top": -100,
+      "left": 0,
+      "attrs": { "pixels": "8" }
+    }
+  ],
+  "connections": [
+    [ "strip1:VDD", "uno:5V", "red", [ "h-28.8", "v313.3", "h188.8" ] ],
+    [ "uno:2", "strip1:DIN", "green", [ "v-57", "h-255.7", "v-34.5" ] ],
+    [ "strip1:VSS", "uno:GND.1", "black", [ "h-9.6", "v34.1", "h125.1" ] ]
+  ],
+  "dependencies": {}
+}

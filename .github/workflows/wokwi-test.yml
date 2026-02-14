@@ -61,8 +61,17 @@ jobs:
           - name: lcd1602-stm32-i2c
             path: wokwi-lcd1602/lcd-i2c-stm32
             scenario: lcd1602.test.yaml
+          - name: led-matrix-uno
+            path: wokwi-led-matrix/matrix-uno
+            scenario: led-matrix.test.yaml
           - name: led-ring-uno
             path: wokwi-led-ring/neopixel-uno
+            scenario: neopixel.test.yaml
+          - name: led-strip-uno
+            path: wokwi-led-strip/strip-uno
+            scenario: led-strip.test.yaml
+          - name: neopixel-uno
+            path: wokwi-neopixel/neopixel-uno
             scenario: neopixel.test.yaml
           - name: max7219-uno
             path: wokwi-max7219-matrix/max7219-uno
