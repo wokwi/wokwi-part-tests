@@ -1,0 +1,19 @@
+name: 'MPU6050 Test (ESP32)'
+version: 1
+steps:
+  - wait-serial: 'MPU6050 Test (ESP32)'
+  - wait-serial: 'MPU6050 found'
+  # Default position: Z=1g (sensor flat)
+  - wait-serial: 'Accel X: 0.0 Y: 0.0 Z: 1.0 g'
+  # Tilt sensor (X=0.5g, Z=0.87g)
+  - set-control:
+      part-id: mpu6050
+      control: accelX
+      value: 0.5
+  - set-control:
+      part-id: mpu6050
+      control: accelZ
+      value: 0.87
+  - wait-serial: 'Accel X: 0.5 Y: 0.0 Z: 0.9 g'
+  # Verify INT pin is working
+  - wait-serial: 'INT pin: OK'

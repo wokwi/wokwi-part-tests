@@ -40,6 +40,7 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
   - [ESP32](./wokwi-microsd-card/sd-esp32/)
 - wokwi-mpu6050
   - [Arduino Uno](./wokwi-mpu6050/mpu6050-uno/)
+  - [ESP32](./wokwi-mpu6050/mpu6050-esp32/)
 - wokwi-neopixel
   - [Arduino Uno](./wokwi-neopixel/neopixel-uno/)
 - wokwi-photoresistor-sensor
