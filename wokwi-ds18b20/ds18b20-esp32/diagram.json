@@ -6,23 +6,24 @@
     {
       "type": "board-esp32-devkit-c-v4",
       "id": "esp",
-      "attrs": {
-        "frequency": "240"
-      }
+      "top": 0,
+      "left": 0,
+      "attrs": { "frequency": "240" }
     },
     {
       "type": "wokwi-ds18b20",
       "id": "ds18b20",
-      "attrs": {
-        "temperature": "23.5"
-      }
+      "top": 8.47,
+      "left": 186.48,
+      "attrs": { "temperature": "23.5" }
     }
   ],
   "connections": [
-    ["esp:TX", "$serialMonitor:RX", "", []],
-    ["esp:RX", "$serialMonitor:TX", "", []],
-    ["esp:4", "ds18b20:DQ", "green", ["v0"]],
-    ["esp:3V3", "ds18b20:VCC", "red", ["v1"]],
-    ["esp:GND.1", "ds18b20:GND", "black", ["v2"]]
-  ]
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:4", "ds18b20:DQ", "green", [ "h100.84", "v-86.4" ] ],
+    [ "esp:3V3", "ds18b20:VCC", "red", [ "h-14.21", "v-38.4", "h124.8", "v86.4", "h96" ] ],
+    [ "esp:GND.3", "ds18b20:GND", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
 }
