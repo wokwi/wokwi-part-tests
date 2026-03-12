@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "board-mfrc522",
+      "id": "rfid1",
+      "top": 35.75,
+      "left": 224.24,
+      "attrs": { "uid": "DE:AD:BE:EF" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:5", "rfid1:SDA", "green", [ "h52.84", "v-38.4" ] ],
+    [ "esp:18", "rfid1:SCK", "orange", [ "h91.24", "v-19.2" ] ],
+    [ "esp:19", "rfid1:MISO", "blue", [ "h100.84", "v9.6" ] ],
+    [ "esp:23", "rfid1:MOSI", "yellow", [ "h110.44", "v57.6" ] ],
+    [ "esp:21", "rfid1:RST", "purple", [ "h43.24", "v57.6" ] ],
+    [ "esp:3V3", "rfid1:VCC", "red", [] ],
+    [ "esp:3V3", "rfid1:3.3V", "red", [ "h-23.81", "v-38.4", "h153.6", "v153.6" ] ],
+    [ "esp:GND.2", "rfid1:GND", "black", [ "v0", "h81.64", "v86.4" ] ]
+  ],
+  "dependencies": {}
+}

@@ -38,6 +38,8 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
   - [Arduino Uno](./wokwi-max7219-matrix/max7219-uno/)
 - wokwi-microsd-card
   - [ESP32](./wokwi-microsd-card/sd-esp32/)
+- wokwi-mfrc522
+  - [ESP32](./wokwi-mfrc522/mfrc522-esp32/)
 - wokwi-mpu6050
   - [Arduino Uno](./wokwi-mpu6050/mpu6050-uno/)
   - [ESP32](./wokwi-mpu6050/mpu6050-esp32/)

@@ -1,0 +1,43 @@
+name: 'MFRC522v2 Custom UID Test'
+version: 1
+author: 'Wokwi'
+
+steps:
+  - wait-serial: 'MFRC522 Version: 0x'
+  - wait-serial: 'MFRC522v2 Ready'
+
+  # Blue Card uses custom uid from attrs
+  - set-control:
+      part-id: rfid1
+      control: card
+      value: 0
+
+  - set-control:
+      part-id: rfid1
+      control: tagPresent
+      value: 1
+
+  - wait-serial: 'Card UID::DE:AD:BE:EF'
+  - wait-serial: 'PICC type: '
+
+  # Remove card
+  - set-control:
+      part-id: rfid1
+      control: tagPresent
+      value: 0
+
+  - delay: 500ms
+
+  # Green Card uses preset uid (not affected by custom uid attr)
+  - set-control:
+      part-id: rfid1
+      control: card
+      value: 1
+
+  - set-control:
+      part-id: rfid1
+      control: tagPresent
+      value: 1
+
+  - wait-serial: 'Card UID::11:22:33:44'
+  - wait-serial: 'PICC type: '
