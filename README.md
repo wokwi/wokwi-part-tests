@@ -52,6 +52,8 @@ This repository contains a set of test projects for many Wokwi parts. The tests 
   - [ESP32](./wokwi-slide-potentiometer/pot-esp32/)
 - wokwi-tm1637-7segment
   - [Arduino Uno](./wokwi-tm1637-7segment/tm1637-uno/)
+- wokwi-wifi-ap
+  - [ESP32](./wokwi-wifi-ap/esp32-scan/)
 
 ## Running the tests
 

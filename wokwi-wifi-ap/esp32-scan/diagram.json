@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -9.6, "left": -119.96, "attrs": {} },
+    {
+      "type": "wokwi-wifi-ap",
+      "id": "ap1",
+      "top": -9.6,
+      "left": 28.8,
+      "attrs": { "ssid": "TestNet-Open", "channel": "6" }
+    },
+    {
+      "type": "wokwi-wifi-ap",
+      "id": "ap2",
+      "top": 67.2,
+      "left": 28.8,
+      "attrs": { "ssid": "TestNet-WPA2", "password": "test1234", "channel": "11" }
+    },
+    {
+      "type": "wokwi-wifi-ap",
+      "id": "ap3",
+      "top": 144,
+      "left": 28.8,
+      "attrs": { "ssid": "TestNet-Internet", "channel": "1" }
+    }
+  ],
+  "connections": [ [ "esp:TX", "$serialMonitor:RX", "", [] ], [ "esp:RX", "$serialMonitor:TX", "", [] ] ],
+  "dependencies": {}
+}

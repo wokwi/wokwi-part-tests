@@ -100,6 +100,10 @@ jobs:
           - name: tm1637-uno
             path: wokwi-tm1637-7segment/tm1637-uno
             scenario: tm1637.test.yaml
+          - name: wifi-ap-esp32
+            path: wokwi-wifi-ap/esp32-scan
+            scenario: wifi-ap.test.yaml
+            timeout: 15000
     steps:
       - uses: actions/checkout@v4
 
@@ -137,6 +141,6 @@ jobs:
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           path: ${{ matrix.test.path }}
-          timeout: 10000
+          timeout: ${{ matrix.test.timeout || 10000 }}
           scenario: ${{ matrix.test.scenario }}
           serial_log_file: serial-${{ matrix.test.name }}.log
